@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá Mundo</title>
+    <script>
+        function exibirMensagem() {
+            alert("Hello World!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Soma de dois números inteiros</h1>
+    <script>
+        function somar() {
+            const num1 = parseInt(document.getElementById("numero1").value);
+            const num2 = parseInt(document.getElementById("numero2").value);
+            const resultado = num1 + num2;
+            document.getElementById("resultado").textContent = `Resultado: ${resultado}`;
+        }
+    </script>
+     <input type="number" id="numero1" placeholder="Número 1">
+     <input type="number" id="numero2" placeholder="Número 2">
+     <button onclick="somar()">Somar</button>
+     <p id="resultado"></p>
+    <button onclick="exibirMensagem()">Clique aqui</button>
+    <h2>Elemento por id</h2>
+    <script>
+        function alterarTexto() {
+            document.getElementById("meuParagrafo").textContent = "New text";
+        }
+    </script>
+     <p id="meuParagrafo">Texto</p>
+     <button onclick="alterarTexto()">Mude o Texto</button>
+     <h3>Elemento por name</h3>
+     <script>
+        function alterarCor() {
+            const elementos = document.getElementsByName("meusElementos");
+            for (const elemento of elementos) {
+                elemento.style.color = "pink";
+            }
+        }
+    </script>
+     <p name="meusElementos">Primeiro</p>
+     <p name="meusElementos">Segundo</p>
+     <button onclick="alterarCor()">Alterar Cor</button>
+     <h4>Elemento por class</h4>
+     <style>
+        .meusParagrafos {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function alterarEstilo() {
+            const elementos = document.getElementsByClassName("meusParagrafos");
+            for (const elemento of elementos) {
+                elemento.style.color = "red";
+            }
+        }
+    </script>
+      <p class="meusParagrafos">Primeiro</p>
+      <p class="meusParagrafos">Segundo</p>
+      <button onclick="alterarEstilo()">Alterar Estilo</button>
+</body>
+</html>
